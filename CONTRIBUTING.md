@@ -1,108 +1,109 @@
+# 기여 가이드 (CONTRIBUTING)
 
-# Contributing to Custom Repo Template
+이 템플릿 리포지토리에 관심 가져주셔서 감사합니다.  
+이 저장소는 여러 프로젝트의 시작점이 되므로, 재사용성과 일관성을 높이는 기여를 지향합니다.
 
-Thank you for your interest in improving this template repository! 
+## 이 저장소의 목적
 
-## About This Repository
+이 저장소는 **템플릿 리포지토리**입니다.  
+즉, 실제 서비스 기능 구현보다 다음 항목을 공통 기반으로 제공하는 것이 목적입니다.
 
-This is a **template repository** designed to serve as a foundation for new projects. Your contributions help improve the base structure, configuration, and best practices that future projects will inherit.
+- 기본 폴더 구조
+- 개발/배포 설정
+- 문서 및 운영 가이드
+- 보안/품질 관련 기본 정책
 
-## How to Contribute
+## 기여 범위
 
-### 1. Areas We Welcome Contributions
+### 환영하는 기여
 
-- ✅ **Template structure improvements** – better organization, cleaner defaults
-- ✅ **Configuration enhancements** – GitHub Actions, `.gitignore`, linting configs
-- ✅ **Documentation updates** – guides, examples, setup instructions
-- ✅ **Best practices** – security policies, CI/CD pipelines, code quality tools
-- ✅ **Bug fixes** – errors in template files or configurations
-- ✅ **New features** – new reusable tools or configurations that benefit most projects
+- 템플릿 구조 개선 (디렉터리 구성, 기본 파일 정리)
+- 설정 개선 (`.gitignore`, CI, 린트/포맷터, 자동화)
+- 문서 보완 (설치/사용 방법, 예시, 운영 가이드)
+- 공통 모범 사례 반영 (보안, 테스트, 협업 규칙)
+- 템플릿 파일의 오류 수정
+- 다수 프로젝트에 공통으로 유용한 기능 추가
 
-### 2. Areas Outside Scope
+### 범위 밖의 기여
 
-- ❌ **Project-specific changes** – use this template to create your own project, then modify it there
-- ❌ **Business logic or application code** – this template provides structure, not features
+- 특정 서비스/도메인에 종속된 비즈니스 로직
+- 템플릿으로 생성된 개별 프로젝트 전용 변경사항  
+  (개별 프로젝트에서 별도로 관리해 주세요)
 
-### 3. Getting Started
+## 기여 절차
 
-1. **Fork and clone** this repository
+1. 저장소를 포크하고 로컬에 클론합니다.
+   ```bash
+   git clone https://github.com/your-username/custom-repo-template.git
+   cd custom-repo-template
+   ```
+
+2. 작업 브랜치를 생성합니다.
+
 ```bash
-git clone https://github.com/your-username/custom-repo-template.git
-cd custom-repo-template
+git checkout -b feature/improve-template-docs
 ```
 
-2. **Create a feature branch** with a descriptive name
+3. 변경사항을 작성합니다.
 
-```bash
-git checkout -b feature/improve-github-actions
-```
+   가능한 한 **하나의 주제(기능/수정)**에 집중해 주세요.
 
-3. **Make your changes** – keep them focused and well-tested
+4. 변경사항을 점검합니다.
 
-4. **Test your changes** locally
-
-   - Verify the template structure is sound
+   - 템플릿 구조가 깨지지 않는지
   
-   - Test any scripts or configurations you modified
-  
-   - Ensure documentation is clear and accurate
+   - 수정한 스크립트/설정이 의도대로 동작하는지
+   
+   - 문서와 실제 설정이 일치하는지
 
-5. **Commit with a clear message**
-
-```bash
-git commit -m "feat: add pre-commit configuration for consistent linting"
-```
-
-6. **Push and open a pull request**
+5. 커밋 메시지를 명확히 작성합니다.
 
 ```bash
-git push origin feature/improve-github-actions
+git commit -m "docs: 템플릿 초기 설정 가이드 보완"
 ```
 
-## Pull Request Guidelines
+6. 브랜치 푸시 후 Pull Request를 생성합니다.
 
-- **Title**: Use a clear, descriptive title (e.g., `feat: add dependabot config`, `docs: expand setup guide`)
+```bash
+git push origin feature/improve-template-docs
+```
 
-- **Description**: Explain *what* you changed and *why* – how does this benefit projects using the template?
+## Pull Request 작성 가이드
 
-- **Keep it focused**: One feature or fix per PR when possible
+- **제목**: 변경 목적이 드러나게 작성
 
-- **Test thoroughly**: Ensure changes don't break existing template structure or workflows
+예) `feat: 기본 GitHub Actions 워크플로 추가`, `docs: 사용 가이드 개편`
 
-- **Document**: If adding new files or configurations, include relevant documentation
+- **설명**: 무엇을 왜 바꿨는지, 템플릿 사용자에게 어떤 이점이 있는지 작성
 
-## Code and Style Guidelines
+- **작게 나누기**: 가능하면 하나의 PR은 하나의 변경 주제로 구성
 
-- Follow existing code structure and naming conventions
+- **문서 동기화**: 설정/구조를 바꿨다면 관련 문서도 함께 업데이트
 
-- Keep documentation up to date alongside code changes
+## 코드/문서 작성 원칙
 
-- Use clear, concise commit messages
+- 기존 네이밍/구조/스타일 규칙을 우선 따릅니다.
 
-- Remove unnecessary comments; keep only clarifying ones
+- 불필요한 복잡성보다 단순하고 유지보수 쉬운 구성을 선호합니다.
 
-## Security and Best Practices
+- 예시 값은 실제 민감정보가 아닌 샘플 값만 사용합니다.
 
-- Never commit secrets, API keys, or sensitive data
+- 필요한 경우에만 짧고 명확한 주석을 추가합니다.
 
-- Follow security best practices when adding configurations (see SECURITY.md)
+## 보안 관련 주의사항
 
-- Use example values or placeholders in documentation
+- 토큰, API 키, 비밀번호, 인증서 등 민감정보를 커밋하지 않습니다.
 
-- Suggest `.env.example` files for environment-based configuration
+- 환경 변수 기반 설정을 우선하고, 예시는 `.env.example` 형태로 제공합니다.
 
-## Reporting Issues
+- 보안 이슈 제보는 공개 이슈 대신 비공개 채널을 사용합니다.
 
-Found a bug or have an idea?
+자세한 내용은 SECURITY.md를 참고해 주세요.
 
-- **Bug reports**: Open an issue with clear reproduction steps and expected vs. actual behavior
+## 이슈 제보 가이드
 
-- **Feature requests**: Describe the use case and how it benefits projects using this template
+- **버그 제보**: 재현 방법, 기대 결과, 실제 결과를 포함해 주세요.
 
-- **Security concerns**: Email `security@example.com` instead (see SECURITY.md)
+- **기능 제안**: 사용 시나리오와 템플릿 관점의 공통 이점을 함께 작성해 주세요.
 
-
-
-## Feedback and Questions
-
-Have questions about contributing? Open a discussion or issue – we're here to help!
+- **보안 제보**: 공개 이슈에 작성하지 말고 `SECURITY.md`의 안내 채널을 이용해 주세요.
